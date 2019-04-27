@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.StationsDao">
+
+    <insert id="insertStations" parameterType="java.util.HashMap">
+    	insert  INTO stations
+            (jianpin,name,code,quanpin)
+        VALUES
+            (#{jianpin},#{name},#{code},#{quanpin})
+    
+    
+    </insert>
+    
+    <update id="updateStations" parameterType="java.util.HashMap">
+    
+    update stations set isfavorite=1 where  code=#{code}
+    </update>
+</mapper>
